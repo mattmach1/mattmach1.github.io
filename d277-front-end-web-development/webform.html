@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Webform</h1>
+        <nav>
+            <a href="/index.html">Home</a>
+            <a href="/Austin.html">Austin</a>
+            <a href="/Houston.html">Houston</a>
+            <a href="/Dallas.html">Dallas</a>
+        </nav>
+    </header>
+
+    <form>
+        <label for="fname" class="form-label">First name:</label><br>
+        <input type="text" id="fname" name="fname"><br>
+
+        <label for="lname" class="form-label">Last name:</label><br>
+        <input type="text" id="lname" name="lname"><br>
+
+        <label for="email" class="form-label">Email:</label><br>
+        <input type="email" id="email" name="email"><br>
+
+        <label for="confirmEmail" class="form-label">Confirm Email:</label><br>
+        <input type="email" id="confirmEmail" name="confirmEmail" required><br>
+
+        <label for="questionBox" class="form-label">Questions:</label><br>
+        <input type="text" id="questionBox" name="questionBox"><br>
+
+        <button type="button" onclick="validateEmail()">Submit</button>
+        <p id="validationMessage"></p>
+    </form>
+
+    <script>
+        function validateEmail() {
+            const email = document.getElementById("email").value;
+            const confirmEmail = document.getElementById("confirmEmail").value;
+            const messageElement = document.getElementById("validationMessage");
+
+            messageElement.textContent = "";
+
+            if (email !== confirmEmail) {
+                messageElement.textContent = "Emails do not match";
+                
+            }
+        }
+    </script>
+</body>
+</html>
