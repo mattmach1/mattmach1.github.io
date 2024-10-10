@@ -1,0 +1,41 @@
+h1 {
+    font-family:'Franklin Gothic Medium',
+     'Arial Narrow', Arial, sans-serif;
+
+    
+}
+
+a:hover {
+    background-color: blueviolet;
+}
+
+img {
+    float: left;
+    width: 300px;
+    height: 300px;
+}
+
+button {
+    position: relative;
+    top: 15px;
+
+}
+
+aside {
+    position: absolute;
+    left: 80%
+}
+
+p {
+    max-width: 40%;
+}
+
+.form-label {
+    font-weight: bolder;
+}
+
+#questionBox {
+    width: 300px;
+    height: 50px;
+}
+
